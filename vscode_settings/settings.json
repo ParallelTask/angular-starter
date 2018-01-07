@@ -1,0 +1,11 @@
+{
+    "tslint.rulesDirectory": "./node_modules/codelyzer",
+    "files.exclude": {
+        "node_modules/": true,
+        ".vscode": true,
+        "README.md": true,
+        "**/*.js": {
+            "when": "$(basename).ts"
+        }
+    }
+}
