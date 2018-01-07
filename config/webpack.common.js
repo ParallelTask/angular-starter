@@ -3,7 +3,6 @@ var merge = require('webpack-merge');
 var HtmlWebpackPlugin = require("html-webpack-plugin");
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var CopyWebpackPlugin = require('copy-webpack-plugin');
-var WriteFilePlugin = require('write-file-webpack-plugin');
 var helper = require("./helper")
 var buildConfig = require('./webpack.build');
 var pkgs = require('./webpack.pkgs');
