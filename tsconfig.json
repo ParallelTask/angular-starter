@@ -1,0 +1,20 @@
+{
+    "compilerOptions": {
+        "target": "es5",
+        "module": "commonjs",
+        "moduleResolution": "node",
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "sourceMap": true,
+        "lib": ["es2017", "dom", "es2015"],
+        "typeRoots": ["node_modules/@types"],
+        "declaration": false
+    },
+    "compileOnSave": false,
+    "exclude": [
+        "dist",
+        "public",
+        "src/**/*.spec.ts",
+        "node_modules"
+    ]
+}
