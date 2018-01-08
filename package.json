@@ -18,8 +18,9 @@
         "serve": "webpack-dev-server --config config/webpack.dev.js --port 8080 --hot --open --progress --bail",
         "serve:lazy": "webpack-dev-server --compress --config config/webpack.dev.js --lazy --port 8081 --open --inline --progress --bail",
         "serve:dev": "light-server -s dist -p 8082 -o --historyindex ./index.html",
-        "serve:prod": "light-server -s public -p 8088 -o --historyindex ./index.html",
+        "serve:prod": "http-server public -p 8088 --push-state -o -c10",
         "lint": "tslint -p tsconfig.json -c tslint.json './src/**/*.ts*'",
+        "start": "npm run publish && npm run serve:prod",
         "generate": "./node_modules/.bin/compodoc -p tsconfig.json"
     },
     "dependencies": {
@@ -64,6 +65,7 @@
         "raw-loader": "^0.5.1",
         "rimraf": "^2.5.2",
         "sass-loader": "^6.0.6",
+        "spa-http-server": "^0.9.0",
         "style-loader": "^0.13.1",
         "to-string-loader": "^1.1.5",
         "tslint": "^5.8.0",
@@ -76,7 +78,7 @@
         "webpack-merge": "^4.1.1"
     },
     "engines": {
-        "node": ">= 6.9.5",
-        "npm": ">= 3.10.10"
+        "node": ">= 6.9.x",
+        "npm": ">= 3.10.x"
     }
 }

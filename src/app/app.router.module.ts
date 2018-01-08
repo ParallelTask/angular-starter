@@ -1,5 +1,6 @@
-import { NgModule } from '@angular/core';
+import { NgModule, Provider, ModuleWithProviders, Type } from '@angular/core';
 import { RouterModule, Routes, DefaultUrlSerializer, UrlTree, UrlSerializer } from '@angular/router';
+import { AppConfiguration } from './app.configuration';
 
 const routes: Routes = [];
 
@@ -12,13 +13,11 @@ class LowerCaseUrlSerializer extends DefaultUrlSerializer {
 }
 
 @NgModule({
-    imports: [RouterModule.forRoot(routes, { useHash: false })],
+    imports: [RouterModule.forRoot(routes, { useHash: AppConfiguration.useHashStrategy })],
     exports: [RouterModule],
-    providers: [
-         {
-            provide: UrlSerializer,
-            useClass: LowerCaseUrlSerializer
-        }
-    ]
+    providers: [ AppConfiguration.useCaseSensitiveUrl ? [] : {
+        provide: UrlSerializer,
+        useClass: LowerCaseUrlSerializer
+    }]
 })
 export class AppRouterModule { } 

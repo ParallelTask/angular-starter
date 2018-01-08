@@ -1,7 +1,7 @@
 import { ConfigurationDev } from './configuration.dev';
 import { ConfigurationRelease } from './configuration.release';
-import { environment } from '../environment/environment';
+import { AppConfiguration } from '../../app.configuration';
 
 export const Configuration = (() => {
-    return environment === 'dev' ? ConfigurationDev : ConfigurationRelease;
+    return AppConfiguration.environment === 'dev' ? ConfigurationDev : ConfigurationRelease;
 })();

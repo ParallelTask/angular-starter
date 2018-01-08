@@ -58,4 +58,7 @@ typings/
 .env
 
 .vscode
+public
+dist
+
 

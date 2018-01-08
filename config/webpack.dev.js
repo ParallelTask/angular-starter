@@ -1,9 +1,11 @@
 var merge = require('webpack-merge');
+var UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var common = require('./webpack.common');
 var helper = require('./helper');
 
 module.exports = merge(common, {
-    devtool: 'inline-source-map',
+    devtool: 'source-map',
     devServer: {
         historyApiFallback: true
     },
@@ -15,18 +17,27 @@ module.exports = merge(common, {
     },
     module: {
         rules: [
-            // SASS that includes angular components
+            // SASS which include in components
             {
                 test: /\.scss$/,
                 include: helper.resolveRoot('src/app'),
-                use: ['raw-loader', {
-                    loader: 'sass-loader',
-                    options: {
-                        sourceMap: true
-                    }
-                }]
+                use: ['to-string-loader', 'css-loader?sourceMap', 'sass-loader?sourceMap']
+            },
+            // SASS that does not include components
+            {
+                test: /\.scss$/,
+                include: helper.resolveRoot('src/assets/styles'),
+                use: ExtractTextPlugin.extract({
+                    fallback: 'style-loader?sourceMap',
+                    use: ['css-loader?sourceMap', 'sass-loader?sourceMap']
+                })
             }
         ]
     },
-    plugins: []
+    plugins: [
+        new UglifyJsPlugin({
+            sourceMap: true
+        }),
+        new ExtractTextPlugin('bundle.css')
+    ]
 })
