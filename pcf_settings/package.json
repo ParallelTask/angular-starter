@@ -1,0 +1,17 @@
+{
+    "name": "angular-starter",
+    "version": "1.0.0",
+    "description": "Angular webpack starter",
+    "author": "Parallel Task Authors",
+    "private": true,
+    "scripts": {
+        "start": "http-server . -p 8080 --push-state -c10"
+    },
+    "dependencies": {
+        "spa-http-server": "^0.9.0"
+    },
+    "engines": {
+        "node": ">= 6.9.x",
+        "npm": ">= 3.10.x"
+    }
+}

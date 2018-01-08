@@ -1,9 +1,9 @@
-var Webpack = require("webpack");
+var Webpack = require('webpack');
 var merge = require('webpack-merge');
-var HtmlWebpackPlugin = require("html-webpack-plugin");
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
+var HtmlWebpackPlugin = require('html-webpack-plugin');
 var CopyWebpackPlugin = require('copy-webpack-plugin');
-var helper = require("./helper")
+var ExtractTextPlugin = require('extract-text-webpack-plugin');
+var helper = require('./helper');
 var buildConfig = require('./webpack.build');
 var pkgs = require('./webpack.pkgs');
 
@@ -83,15 +83,6 @@ module.exports = merge(pkgsLoader, {
                         removeAttributeQuotes: false,
                     }
                 }]
-            },
-            // SASS that does not include components
-            {
-                test: /\.scss$/,
-                include: helper.resolveRoot('src/assets/styles'),
-                use: ExtractTextPlugin.extract({
-                    fallback: "style-loader",
-                    use: "css-loader!sass-loader",
-                })
             }
         ]
     },
@@ -101,7 +92,6 @@ module.exports = merge(pkgsLoader, {
             template: './src/index.html',
             inject: true
         }),
-        new ExtractTextPlugin("bundle.css"),
         new Webpack.ContextReplacementPlugin(
             // The (\\|\/) piece accounts for path separators in *nix and Windows
             /angular(\\|\/)core(\\|\/)/,
