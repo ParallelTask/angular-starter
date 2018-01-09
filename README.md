@@ -40,7 +40,7 @@ Uses `.scss` files for styling and no `.css` loaders are configured, add your ow
 - Easy switch between hash and non hash based url. Configure `src/app/app.configuration.ts`
 - Angular supports **CaseSensitiveUrling** which is the default web standards, configurable `src/app/app.configuration.ts`
 - Enable angular prod mode by setting **environment: prod** property in `src/app/app.configuration.ts`
--
+
 ### Internals
 - This project uses **webpack-conditional-loader** to support easy switch between lazy and early load of modules.
 - This project uses **codelyzer** for configuring coding standards across teams.
