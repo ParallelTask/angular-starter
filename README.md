@@ -6,7 +6,7 @@ An Angular starter featuring Angular 5 and Webpack Integration includes (Tslint,
 This project is well supported with vscode editor. Easy deployment with PCF (pivot clound foundry).
 Uses `.scss` files for styling and no `.css` loaders are configured, add your own css loaders to support `.css` extensions
 
-- `npm run install` to install dependencies
+- `npm install` to install dependencies
 - `npm run serve` quick launch of webpack-devserver
 - `npm run build` build development environment files to **dist** directory
 - `npm run publish` build production ready files to **public** directory
@@ -40,7 +40,7 @@ Uses `.scss` files for styling and no `.css` loaders are configured, add your ow
 - Easy switch between hash and non hash based url. Configure `src/app/app.configuration.ts`
 - Angular supports **CaseSensitiveUrling** which is the default web standards, configurable `src/app/app.configuration.ts`
 - Enable angular prod mode by setting **environment: prod** property in `src/app/app.configuration.ts`
-
+-
 ### Internals
 - This project uses **webpack-conditional-loader** to support easy switch between lazy and early load of modules.
 - This project uses **codelyzer** for configuring coding standards across teams.
