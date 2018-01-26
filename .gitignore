@@ -60,5 +60,7 @@ typings/
 .vscode
 public
 dist
-
+unit_tests_report
+LICENSE
+documentation
 

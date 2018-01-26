@@ -100,7 +100,7 @@
         ],
         "array-type": [
             true,
-            "generic"
+            "array-simple"
         ],
         "prefer-template": true,
         "binary-expression-operand-order": true,
