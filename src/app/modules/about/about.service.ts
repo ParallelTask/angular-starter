@@ -6,16 +6,16 @@ import { IAboutService } from './iabout.service';
 
 @Injectable()
 export class AboutService implements IAboutService {
-    
-    constructor(private http: HttpClient) { }
 
-    getCustomerById(id: number): Observable<boolean> {
-        return this.http.get('Customer/GetCustomerById/${id}').map((customer: boolean) => {
-            return customer;
-        });
-    }
+  constructor(private http: HttpClient) { }
 
-    getContactEmail(): string {
-        return 'pt-hacker@example.com';
-    }
+  getCustomerById(id: number): Observable<string[]> {
+    return this.http.get('Customer/GetCustomerById/${id}').map((customer: string[]) => {
+      return customer;
+    });
+  }
+
+  getContactEmail(): string {
+    return 'pt-hacker@example.com';
+  }
 }

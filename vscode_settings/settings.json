@@ -3,9 +3,14 @@
     "files.exclude": {
         "node_modules/": true,
         ".vscode": true,
-        "README.md": true,
+        "LICENSE": true,
+        "documentation": true,
+        "dist": true,
+        "public": true,
         "**/*.js": {
             "when": "$(basename).ts"
         }
-    }
+    },
+    "editor.formatOnSave": true,
+    "git.ignoreLimitWarning": true
 }
