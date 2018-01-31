@@ -23,7 +23,7 @@ coreTesting.TestBed.initTestEnvironment(
 Error.stackTraceLimit = 0;
 jasmine.DEFAULT_TIMEOUT_INTERVAL = 4000;
 
-const context = require.context('../src/', true, /\.spec\.ts$/);
+const context = require.context('../src/tests/', true, /\.spec\.ts$/);
 
 /*
  * get all the files, for each file, call the context function

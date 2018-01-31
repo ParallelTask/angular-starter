@@ -24,7 +24,7 @@ module.exports = merge(common, {
                 test: /\.scss$/,
                 include: helper.resolveRoot('src/assets/styles'),
                 use: ExtractTextPlugin.extract({
-                    fallback: "style-loader",
+                    fallback: 'style-loader',
                     use: ['css-loader', 'sass-loader']
                 })
             }
@@ -32,6 +32,6 @@ module.exports = merge(common, {
     },
     plugins: [
         new UglifyJsPlugin(),
-        new ExtractTextPlugin("bundle.css")
+        new ExtractTextPlugin('bundle.css')
     ]
 });

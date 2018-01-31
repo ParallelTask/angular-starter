@@ -1,6 +1,6 @@
 /*
  * Webpack builds configuration files
- * use double-quotes for keysto to treat as plain json configuration
+ * use double-quotes for keys to treat as plain json configuration
  */
 
 module.exports = {
