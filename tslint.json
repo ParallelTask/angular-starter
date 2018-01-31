@@ -152,7 +152,7 @@
         "space-before-function-paren": [
             true,
             {
-                "anonymous": "never",
+                "anonymous": "always",
                 "named": "never",
                 "asyncArrow": "always",
                 "method": "never",
@@ -222,6 +222,6 @@
         "object-literal-key-quotes": [true, "as-needed"],
         "prefer-method-signature": true,
         "no-debugger": true,
-        "no-console": true
+        "no-console": false
     }
 }

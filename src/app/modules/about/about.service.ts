@@ -10,11 +10,16 @@ export class AboutService implements IAboutService {
   constructor(private http: HttpClient) { }
 
   getCustomerById(id: number): Observable<string[]> {
-    return this.http.get('Customer/GetCustomerById/${id}').map((customer: string[]) => {
+    return this.http.get(`Customer/GetCustomerById/${id}`).map((customer: string[]) => {
+      if (customer == null) {
+        return [];
+      }
+
       return customer;
     });
   }
 
+  @TimeIntercept
   getContactEmail(): string {
     return 'pt-hacker@example.com';
   }

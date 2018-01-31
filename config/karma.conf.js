@@ -9,8 +9,7 @@ module.exports = function(config) {
             require('karma-chrome-launcher'),
             require('karma-jasmine-html-reporter'),
             require('karma-webpack'),
-            require('karma-sourcemap-loader'),
-            require('karma-html-detailed-reporter')
+            require('karma-sourcemap-loader')
         ],
         mime: {
             'text/x-typescript': ['ts']
@@ -23,7 +22,7 @@ module.exports = function(config) {
         preprocessors: {
             'config/karma.entry.js': ['webpack', 'sourcemap']
         },
-        reporters: ['htmlDetailed', 'kjhtml'],
+        reporters: ['kjhtml'],
         browsers: ['Chrome'],
         client: {
             clearContext: false,
@@ -34,11 +33,6 @@ module.exports = function(config) {
         logLevel: config.LOG_WARN,
         autoWatch: true,
         singleRun: false,
-        concurrency: Infinity,
-        htmlDetailed: {
-            splitResults: false,
-            dir: './unit_tests_report',
-            autoReload: false
-        }
+        concurrency: Infinity
     });
 }
