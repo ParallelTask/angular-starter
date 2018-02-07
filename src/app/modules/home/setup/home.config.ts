@@ -9,14 +9,14 @@ import { HomeProviders } from './home.providers';
 import { HomeLazyRouterRoute } from './home.lazy.router.route';
 // #endif
 
-let imports: Array<Type<any> | ModuleWithProviders | Array<any>> = [
+let imports: Array<Type<any> | ModuleWithProviders | any[]> = [
     CommonModule
     , HttpClientModule
-    
+
     // #if global.lazyLoad.HomeModule === true
     , RouterModule.forChild(HomeLazyRouterRoute)
     // #endif
-]; 
+];
 
 export const HomeConfig: NgModule = {
     imports: imports,

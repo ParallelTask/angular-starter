@@ -21,7 +21,7 @@ import { AboutModule } from './modules/about/about.module';
 import { AboutComponent } from './modules/about/about.component';
 // #endif
 
-let imports: Array<Type<any> | ModuleWithProviders | Array<any>> = [
+let imports: Array<Type<any> | ModuleWithProviders | any[]> = [
     BrowserModule
     , AppRouterModule
     , HttpInterceptorModule
@@ -41,7 +41,7 @@ let imports: Array<Type<any> | ModuleWithProviders | Array<any>> = [
 
 export const AppModuleConfig: NgModule = {
     declarations: [AppComponent],
-    imports : imports,
+    imports: imports,
     bootstrap: [AppComponent],
     entryComponents: [
         NotFoundComponent
@@ -51,7 +51,7 @@ export const AppModuleConfig: NgModule = {
         // #if global.lazyLoad.HomeModule !== true
         , HomeComponent
         // #endif
-        
+
         // #if global.lazyLoad.AboutModule !== true
         , AboutComponent
         // #endif
