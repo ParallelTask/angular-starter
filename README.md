@@ -35,10 +35,10 @@ Uses `.scss` files for styling and no `.css` loaders are configured, add your ow
 - Support to load external files like bootstrap, jquery in 3 configurable ways in `config/webpack.build.js`
     1. Load via CDN, configure **cdn** property in `config\webpack.pkgs.js`
     2. Load via Local modules, configure **local** in `config\webpack.pkgs.js`
-    3. Local local modules but bundle them, import those files in `src/vendor.ts` with extensions
->Comment the local modules import in `vendor.ts` when you choose other than **bundle**
+    3. Load local modules but bundle them, import those files in `src/vendor.ts` with extensions
+>Comment local modules import in `vendor.ts` when you choose **cdn | local**
 - Easy switch between hash and non hash based url. Configure `src/app/app.configuration.ts`
-- Angular supports **CaseSensitiveUrling** which is the default web standards, configurable `src/app/app.configuration.ts`
+- Angular supports **CaseSensitiveUrling** which is the default web standard, configurable `src/app/app.configuration.ts`
 - Enable angular prod mode by setting **environment: prod** property in `src/app/app.configuration.ts`
 
 ### Internals
