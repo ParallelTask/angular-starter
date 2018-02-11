@@ -8,11 +8,11 @@ import '@angular/router';
 import '@angular/animations';
 
 // Other
-import 'rxjs';
-import 'moment';
-import 'lodash';
-import 'primeng/primeng';
-import 'immutable';
+// import 'rxjs';
+// import 'moment';
+// import 'lodash';
+// import 'primeng/primeng';
+// import 'immutable';
 
 // Global style
 import './assets/styles/custom.scss';

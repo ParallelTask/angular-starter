@@ -35,9 +35,10 @@ module.exports = merge(common, {
         ]
     },
     plugins: [
-        new UglifyJsPlugin({
-            sourceMap: true
-        }),
+        // Using UglifyJs creates slower loads
+        // new UglifyJsPlugin({
+        //     sourceMap: true
+        // }),
         new ExtractTextPlugin('bundle.css')
     ]
-})
+});
