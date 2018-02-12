@@ -15,11 +15,15 @@ module.exports = {
                 use: ['to-string-loader', 'css-loader?sourceMap', 'sass-loader?sourceMap']
             },
             {
-                loader: 'html-loader',
-                options: {
-                    caseSensitive: true,
-                    removeAttributeQuotes: false,
-                }
+                test: /\.html$/,
+                // see https://github.com/kangax/html-minifier#options-quick-reference
+                use: [{
+                    loader: 'html-loader',
+                    options: {
+                        caseSensitive: true,
+                        removeAttributeQuotes: false,
+                    }
+                }]
             }
         ]
     }
