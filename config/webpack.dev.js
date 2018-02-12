@@ -35,7 +35,7 @@ module.exports = merge(common, {
         ]
     },
     plugins: [
-        // Using UglifyJs creates slower loads
+        // Using UglifyJs creates slower loads, ignore for dev build
         // new UglifyJsPlugin({
         //     sourceMap: true
         // }),

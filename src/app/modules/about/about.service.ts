@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs/Rx';
 import { lodash } from '../../extensions/ext.module';
 import { IAboutService } from './iabout.service';
-import { TimeIntercept } from '../../core/decorators/time.intercept';
+import { TimeInterceptor } from '../../core/decorators/decorators';
 
 @Injectable()
 export class AboutService implements IAboutService {
@@ -20,7 +20,7 @@ export class AboutService implements IAboutService {
     });
   }
 
-  @TimeIntercept('AboutService', 'getContactEmail')
+  @TimeInterceptor('AboutService', 'getContactEmail')
   getContactEmail(): string {
     return 'pt-hacker@example.com';
   }

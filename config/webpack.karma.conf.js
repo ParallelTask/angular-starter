@@ -7,8 +7,20 @@ module.exports = {
     },
     module: {
         rules: [{
-            test: /\.ts$/,
-            use: ['awesome-typescript-loader', 'angular2-template-loader']
-        }]
+                test: /\.ts$/,
+                use: ['awesome-typescript-loader', 'angular2-template-loader']
+            },
+            {
+                test: /\.scss$/,
+                use: ['to-string-loader', 'css-loader?sourceMap', 'sass-loader?sourceMap']
+            },
+            {
+                loader: 'html-loader',
+                options: {
+                    caseSensitive: true,
+                    removeAttributeQuotes: false,
+                }
+            }
+        ]
     }
 };

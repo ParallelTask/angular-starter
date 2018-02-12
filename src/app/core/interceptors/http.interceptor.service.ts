@@ -5,13 +5,15 @@ import 'rxjs/add/operator/do';
 
 import { IValidatorService } from '../utility/ivalidator.service';
 import { IConfigurationService } from '../configuration/iconfiguration.service';
+import { AppConfiguration } from '../../app.configuration';
 
 @Injectable()
 export class HttpInterceptorService implements HttpInterceptor {
 
-    constructor(private validatorService: IValidatorService, 
-                private configService: IConfigurationService) { }
-    
+    constructor(
+        private validatorService: IValidatorService,
+        private configService: IConfigurationService) { }
+
     /**
      * Intercepts every HTTP ajax request
      * @param req request object
@@ -19,20 +21,24 @@ export class HttpInterceptorService implements HttpInterceptor {
      */
     intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
 
-        const customHeaders = this.addHeaders(new HttpHeaders());
-        const apiOrigin = this.validatorService.isAbsoluteURI(req.url) ? req.url : this.configService.apiOrigin() + req.url;
+        if (AppConfiguration.enableHttpInterceptor) {
+            const customHeaders = this.addHeaders(new HttpHeaders());
+            const apiOrigin = this.validatorService.isAbsoluteURI(req.url) ? req.url : this.configService.apiOrigin() + req.url;
 
-        const clonedRequest = req.clone({ headers: customHeaders, url: apiOrigin });
+            const clonedRequest = req.clone({ headers: customHeaders, url: apiOrigin });
 
-        return next.handle(clonedRequest).do(event => { }, err => {
+            return next.handle(clonedRequest).do(event => { }, err => {
 
-            if (err instanceof HttpErrorResponse && err.status === 401) {
-               
-            } else if (err instanceof HttpErrorResponse && err.status === 403) {
-                
-            } else if (err instanceof HttpErrorResponse && err.status === 404) {
-            } else {}
-        });
+                if (err instanceof HttpErrorResponse && err.status === 401) {
+
+                } else if (err instanceof HttpErrorResponse && err.status === 403) {
+
+                } else if (err instanceof HttpErrorResponse && err.status === 404) {
+                } else { }
+            });
+        } else {
+            return next.handle(req);
+        }
     }
 
     /**
