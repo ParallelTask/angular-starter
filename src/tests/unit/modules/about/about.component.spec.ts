@@ -1,5 +1,5 @@
 import { inject, TestBed } from '@angular/core/testing';
-import { Times, It, Mock } from '../../../moq/moq.core';
+import { Times, It, Mock } from '../../../setup/extensions';
 import { Fixture } from '../../../fixture/fixture.core';
 import { IAboutService } from '../../../../app/modules/about/iabout.service';
 import { AboutComponent } from '../../../../app/modules/about/about.component';
