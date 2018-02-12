@@ -1,26 +1,34 @@
+import { Inject, Injector } from '@angular/core';
+import { IConfigurationService } from '../configuration/iconfiguration.service';
 import { AppConfiguration } from '../../app.configuration';
 
-export function TimeIntercept(className: string, methodName: string): any {
+export class TimeIntercept {
 
-    // tslint:disable-next-line:only-arrow-functions
-    return function (target: any, key: string, descriptor: PropertyDescriptor): any {
+    private static _timeInterceptor: boolean;
 
-        return {
-            value: function (...args: any[]): any {
+    static TimeInterceptor(className: string, methodName: string): any {
 
-                if (AppConfiguration.enableTimeInterceptor === false) {
-                    // tslint:disable-next-line:no-invalid-this
-                    return descriptor.value.apply(this, args);
+        // tslint:disable-next-line:only-arrow-functions
+        return function (target: any, key: string, descriptor: PropertyDescriptor): any {
+
+            return {
+                value: function (...args: any[]): any {
+
+                    if (AppConfiguration.enableTimeInterceptor) {
+                        descriptor.value = descriptor.value;
+                        console.log(`execution started class : ${className} and method : ${methodName}`);
+
+                        // tslint:disable-next-line:no-invalid-this
+                        let result = descriptor.value.apply(this, args);
+                        console.log(`execution ended class : ${className} and method : ${methodName}`);
+
+                        return result;
+                    } else {
+                        // tslint:disable-next-line:no-invalid-this
+                        return descriptor.value.apply(this, args);
+                    }
                 }
-
-                descriptor.value = descriptor.value;
-                console.log(`execution started class : ${className} and method : ${methodName}`);
-                // tslint:disable-next-line:no-invalid-this
-                let result = descriptor.value.apply(this, args);
-                console.log(`execution ended class : ${className} and method : ${methodName}`);
-
-                return result;
-            }
+            };
         };
-    };
+    }
 }
