@@ -51,3 +51,8 @@ Uses `.scss` files for styling and no `.css` loaders are configured, add your ow
 - This project uses **codelyzer** for configuring coding standards across teams.
 - This project uses **composedoc** to build your angular documentation, we can look at generated docs for quick understanding of project architecture.
 - `@NgModule` configuration object splitted out to seperate `.config` file under `setup` directory for each module **(ex: About)** to increase the smooth development in testing the components
+
+### Known Issues
+- Move app configuration from **app.configuration.ts** to **app.configuration.json** to reduce rebuild on configuration changes but this requires us to do **http.get** request on application startup because angular can only read .ts files and not the .json files.
+- Configure sourcemaps builds for specific .ts files. We can exclude vendor.ts, polyfiils.ts from source maps generation.
+
