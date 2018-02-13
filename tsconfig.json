@@ -24,6 +24,7 @@
         "config",
         "vscode_settings",
         "src/**/*.spec.ts",
+        "e2e/**/*.e2e-spec.ts",
         "node_modules"
     ]
 }
