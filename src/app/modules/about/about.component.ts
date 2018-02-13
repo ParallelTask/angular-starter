@@ -7,12 +7,16 @@ import { IAboutService } from './iabout.service';
   styleUrls: ['./about.component.scss']
 })
 export class AboutComponent implements OnInit {
-    
-    email: string;
 
-    constructor(private aboutService: IAboutService) {}
+  email: string;
 
-    ngOnInit(): void {
-      this.email =  this.aboutService.getContactEmail();
-    }
+  constructor(private aboutService: IAboutService) { }
+
+  ngOnInit(): void {
+    this.email = this.aboutService.getContactEmail();
+  }
+
+  runMe(): void {
+    this.email = 'dummy@example.com';
+  }
 }
