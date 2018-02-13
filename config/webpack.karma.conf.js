@@ -1,4 +1,4 @@
-var webpack = require('webpack');
+var Webpack = require('webpack');
 
 module.exports = {
     devtool: 'inline-source-map',
@@ -26,5 +26,8 @@ module.exports = {
                 }]
             }
         ]
-    }
+    },
+    plugins: [
+        new Webpack.NoEmitOnErrorsPlugin()
+    ]
 };
