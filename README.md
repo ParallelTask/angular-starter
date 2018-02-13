@@ -45,4 +45,4 @@ Uses `.scss` files for styling and no `.css` loaders are configured, add your ow
 - This project uses **webpack-conditional-loader** to support easy switch between lazy and early load of modules.
 - This project uses **codelyzer** for configuring coding standards across teams.
 - This project uses **composedoc** to build your angular documentation, we can look at generated docs for quick understanding of project architecture.
-- Module configuration object is splitted out to seperate `.config` file under `setup` directory for each module **(ex: Home, About)** to increase the smooth development of testing the components
+- `@NgModule` configuration object splitted out to seperate `.config` file under `setup` directory for each module **(ex: About)** to increase the smooth development in testing the components
