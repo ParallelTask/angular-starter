@@ -1,18 +1,21 @@
-// Angular
+// Import most commmonly used modules, such that these modules can be cached in vendor.ts
 import '@angular/core';
 import '@angular/common';
 import '@angular/forms';
-import '@angular/http';
-import '@angular/platform-browser-dynamic';
+import '@angular/common/http';
 import '@angular/router';
-import '@angular/animations';
+// Dont just import all modules that increases bundle size
+// import '@angular/platform-browser-dynamic';
+// import '@angular/animations';
 
-// Other
+// import the modules that cannot be imported by individual modules
+// lodash, momemt cannot be loaded by modules
+// However primeng, rxjs can be loaded by modules
 // import 'rxjs';
-// import 'moment';
-// import 'lodash';
+import 'moment';
+import 'lodash';
 // import 'primeng/primeng';
-// import 'immutable';
+import 'immutable';
 
 // Global style
 import './assets/styles/custom.scss';
