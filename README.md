@@ -1,33 +1,36 @@
 
 # angular-starter
-An Angular starter featuring Angular 5 and Webpack Integration includes (Tslint, Codelyzer, Composedoc)
+An Angular starter featuring Angular 5 and Webpack includes (Tslint, Codelyzer, Composedoc, Moq.ts, Fixture)
 
 ## Getting Started
 This project is well supported with vscode editor. Easy deployment with PCF (pivot clound foundry).
 Uses `.scss` files for styling and no `.css` loaders are configured, add your own css loaders to support `.css` extensions
 
 - `npm install` to install dependencies
-- `npm run serve` quick launch of webpack-devserver
-- `npm run build` build development environment files to **dist** directory
+- `npm run serve` quick launch of webpack-devserver that supports live-reload
+- `npm run build` build development ready files to **dist** directory
 - `npm run publish` build production ready files to **public** directory
-- `npm run serve:dev` starts dev server locally.
-- `npm run serve:prod` starts production ready server locally and watch out your file loading response times. 
+- `npm run serve:dev` starts dev server locally
+- `npm run serve:prod` starts production ready server locally and watch out file loading response times.
+- `npm run lint` runs coding standards rules across entire project (these rules can be set in tslint.json)
+- `npm start` build and start production ready server
+- `npm run test:karma` karma-chrome-launcher runs the jasmine unit test cases in chrome browser
 
 > Before running `serve:dev` and `serve:prod`, make sure the `npm run build` and `npm run publish` are executed to build output files.
 
 ### Project Structure
 - config 
   
-  Webpack configuration files.
+  Webpack configuration files for different enviroments.
 - pcf_settings
   
-  PCF deployment files.
+  PCF deployment steps and files.
 - src
 
   Angular source code.
 - vscode_settings
   
-  VSCode editor configuration files specific to angular. Copy these files to you local **.vscode** project directory and you will automatically get suggestions to install plugins. Install these plugins for good dev experience.
+  VSCode editor configuration files specific to angular. Copy these files to your local **.vscode** project directory and you will automatically get suggestions to install plugins. Install these plugins for good dev experience.
 
 ### Features
 
