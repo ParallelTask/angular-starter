@@ -1,4 +1,4 @@
-let webpackKarmaConfig = require('./webpack.karma.conf');
+let webpackKarmaConfig = require('./webpack.karma');
 
 module.exports = function(config) {
     config.set({
