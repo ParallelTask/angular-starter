@@ -15,6 +15,8 @@ Uses `.scss` files for styling and no `.css` loaders are configured, add your ow
 - `npm run lint` runs coding standards rules across entire project (these rules can be set in tslint.json)
 - `npm start` build and start production ready server
 - `npm run test:karma` karma-chrome-launcher runs the jasmine unit test cases in chrome browser
+- `npm run webdriver:start` start the selenium webdriver before running protractor e2e tests
+- `npm run test:protractor` launch the protractor e2e tests
 
 > Before running `serve:dev` and `serve:prod`, make sure the `npm run build` and `npm run publish` are executed to build output files.
 
