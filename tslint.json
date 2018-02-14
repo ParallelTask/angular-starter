@@ -4,7 +4,7 @@
         "angular-whitespace": [true, "check-interpolation", "check-semicolon"],
         "banana-in-box": true,
         "templates-no-negated-async": true,
-        "directive-selector": [true, "attribute", "pt-hacker", "camelCase"],
+        "directive-selector": [true, "attribute", "ptHacker", "camelCase"],
         "component-selector": [true, "element", "pt-hacker", "kebab-case"],
         "use-input-property-decorator": true,
         "use-output-property-decorator": true,
