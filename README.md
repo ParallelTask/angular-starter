@@ -32,6 +32,9 @@ Uses `.scss` files for styling and no `.css` loaders are configured, add your ow
   Angular source code.
 - vscode_settings
   
+  e2e2
+- end to end tests
+
   VSCode editor configuration files specific to angular. Copy these files to your local **.vscode** project directory and you will automatically get suggestions to install plugins. Install these plugins for good dev experience.
 
 ### Features
