@@ -1,6 +1,5 @@
 import { NgModule, ModuleWithProviders, Type } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { AboutComponent } from '../about.component';
 import { AboutProviders } from './about.providers';
@@ -13,7 +12,6 @@ import { AboutLazyRouterRoute } from './about.lazy.router.route';
 
 let imports: Array<Type<any> | ModuleWithProviders | any[]> = [
     CommonModule
-    , HttpClientModule
     , ObservablesModule
 
     // #if global.lazyLoad.AboutModule === true
