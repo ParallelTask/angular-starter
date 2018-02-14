@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { moment } from '../../extensions/ext.module';
+import * as moment from 'moment';
 import { IConvertService } from './iconvert.service';
 
 @Injectable()

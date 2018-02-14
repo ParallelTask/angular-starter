@@ -19,7 +19,7 @@
         "serve:lazy": "webpack-dev-server --content-base ./dist --lazy --inline --config config/webpack.dev.js --port 8081 --open --progress --bail",
         "serve:dev": "light-server -s dist -p 8082 -o --historyindex ./index.html",
         "serve:prod": "http-server public -p 8088 --push-state -o -c10",
-        "lint": "tslint -p tsconfig.json -c tslint.json './src/**/*.ts*'",
+        "lint": "tslint -p ./tsconfig.json -c ./tslint.json \"./src/**/*.ts*\"",
         "start": "npm run publish && npm run serve:prod",
         "generate": "compodoc -p tsconfig.json",
         "test:karma": "karma start ./config/karma.conf.js",

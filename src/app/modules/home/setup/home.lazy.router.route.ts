@@ -1,5 +1,5 @@
 import { Routes } from '@angular/router';
-import { lodash } from '../../../extensions/ext.module';
+import * as lodash from 'lodash';
 import { HomeComponent } from '../home.component';
 import { HomeChildRoute } from './home.child.route';
 

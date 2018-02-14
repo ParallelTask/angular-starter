@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs/Rx';
-import { lodash } from '../../extensions/ext.module';
+import { Observable } from 'rxjs/Observable';
+import * as lodash from 'lodash';
 import { IAboutService } from './iabout.service';
 import { TimeInterceptor } from '../../core/decorators/decorators';
 

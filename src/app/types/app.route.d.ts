@@ -9,4 +9,3 @@ export interface IAppRouteStates {
     serverError?: Route,
     pageUnfound?: Route
 }
-

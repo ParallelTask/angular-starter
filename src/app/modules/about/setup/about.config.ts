@@ -4,6 +4,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { AboutComponent } from '../about.component';
 import { AboutProviders } from './about.providers';
+// Added to test observables working
+import { ObservablesModule } from '../../../lib/observables/observables.module';
 
 // #if global.lazyLoad.AboutModule === true
 import { AboutLazyRouterRoute } from './about.lazy.router.route';
@@ -12,6 +14,7 @@ import { AboutLazyRouterRoute } from './about.lazy.router.route';
 let imports: Array<Type<any> | ModuleWithProviders | any[]> = [
     CommonModule
     , HttpClientModule
+    , ObservablesModule
 
     // #if global.lazyLoad.AboutModule === true
     , RouterModule.forChild(AboutLazyRouterRoute)

@@ -4,6 +4,7 @@
         "johnpapa.angular2",
         "msjsdiag.debugger-for-chrome",
         "lonefy.vscode-js-css-html-formatter",
-        "stevencl.adddoccomments"
+        "stevencl.adddoccomments",
+		"KnisterPeter.vscode-github"
     ]
 }

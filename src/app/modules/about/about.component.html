@@ -1,4 +1,9 @@
 <h2>About Page:</h2>
 <h3 class="email">{{ email }}</h3>
 <div class="violetcolor">about: this should be violet color</div>
+<div>Observable button clicked times {{ rxClicks }}</div>
+<div>Normal button clicked times {{ nlClicks }}</div>
+<button (ptHackerRxClick)="rxClick($event)">Observable EventClick</button>
+<button (click)="nlClick()">Nomral EventClick</button>
+<br>
 <button (click)="runMe()">RunMe</button>
