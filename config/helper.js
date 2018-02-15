@@ -1,7 +1,6 @@
-/*
+/** 
  * helper functions useful in webpack compilation process
  */
-
 var path = require('path');
 var start = require('./start');
 

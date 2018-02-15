@@ -21,7 +21,7 @@ module.exports = merge(common, {
             {
                 test: /\.scss$/,
                 include: helper.resolveRoot('src/app'),
-                use: ['to-string-loader', 'css-loader?sourceMap', 'sass-loader?sourceMap']
+                use: ['to-string-loader?sourceMap', 'css-loader?sourceMap', 'sass-loader?sourceMap']
             },
             // SASS that does not include components
             {

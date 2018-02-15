@@ -10,6 +10,7 @@ import { AppComponent } from './app.component';
 import { NotFoundComponent } from './modules/shared/page-error/notfound.component';
 import { ServerErrorComponent } from './modules/shared/page-error/server.error.component';
 import { UnauthorizedComponent } from './modules/shared/page-error/unauthorized.component';
+import { HttpMockModule } from '../lib/http_mock/http.mock.module';
 
 // #if global.lazyLoad.HomeModule !== true
 import { HomeModule } from './modules/home/home.module';
@@ -24,16 +25,19 @@ import { AboutComponent } from './modules/about/about.component';
 let imports: Array<Type<any> | ModuleWithProviders | any[]> = [
     BrowserModule
     , AppRouterModule
-    , HttpInterceptorModule
     , ConfigurationModule
     , UtilityModule
     , CoreModule
     , SharedModule
-
+    // #if global.mockHttpRequests !== true
+    , HttpInterceptorModule
+    // #endif
+    // #if global.mockHttpRequests === true
+    , HttpMockModule
+    // #endif
     // #if global.lazyLoad.HomeModule !== true
     , HomeModule
     // #endif
-
     // #if global.lazyLoad.AboutModule !== true
     , AboutModule
     // #endif
@@ -47,11 +51,9 @@ export const AppModuleConfig: NgModule = {
         NotFoundComponent
         , ServerErrorComponent
         , UnauthorizedComponent
-
         // #if global.lazyLoad.HomeModule !== true
         , HomeComponent
         // #endif
-
         // #if global.lazyLoad.AboutModule !== true
         , AboutComponent
         // #endif

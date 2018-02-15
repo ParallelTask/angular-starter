@@ -9,15 +9,28 @@ import { Observable } from 'rxjs/Observable';
 })
 export class AboutComponent implements OnInit {
 
-  private nlClicks = 0;
-  private rxClicks = 0;
+  nlClicks = 0;
+  rxClicks = 0;
 
+  httpData: string;
   email: string;
 
   constructor(private aboutService: IAboutService) { }
 
   ngOnInit(): void {
     this.email = this.aboutService.getContactEmail();
+  }
+
+  getCustomer(): void {
+    this.aboutService
+      .getCustomerById(45)
+      .subscribe(x => this.httpData = x.join());
+  }
+
+  getCustomerNotFound(): void {
+    this.aboutService
+      .getCustomerById(46)
+      .subscribe(x => this.httpData = x.join());
   }
 
   /**

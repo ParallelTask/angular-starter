@@ -25,7 +25,7 @@ jasmine.DEFAULT_TIMEOUT_INTERVAL = 4000;
 
 const context = require.context('../src/tests/', true, /\.spec\.ts$/);
 
-/*
+/**
  * get all the files, for each file, call the context function
  * that will require the file and load it up here.
  */
