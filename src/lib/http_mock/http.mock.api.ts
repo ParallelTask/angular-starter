@@ -7,11 +7,13 @@ export const HttpMockAPi = {
         // When you perform get using
         // this.http.get(Customer/GetCustomerById/45)
         // following handler gets executed.
-        'Customer/GetCustomerById/45': (): Observable<string[]> => {
+        'Customer/GetCustomerById/45': (uri: string): Observable<string[]> => {
             return Fixture.createRxObservable<string[]>(Fixture.createStringMany());
         }
     },
     post: {
-
+        'Customer/GetCustomerById/45': (uri: string, data: any): Observable<string[]> => {
+            return Fixture.createRxObservable<string[]>(Fixture.createStringMany());
+        }
     }
 };
