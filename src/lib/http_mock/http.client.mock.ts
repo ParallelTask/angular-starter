@@ -8,7 +8,7 @@ export const HttpClientMock = new Mock<HttpClient>()
     .returns((uri: string) => {
         for (const prop in HttpMockAPi.get) {
             if (new RegExp(prop).test(uri) === true) {
-                return HttpMockAPi.get[prop]();
+                return HttpMockAPi.get[prop](uri);
             }
         }
         throw new Error(`MockHttpApi says GET '${uri}' not found - 404`);
@@ -17,7 +17,7 @@ export const HttpClientMock = new Mock<HttpClient>()
     .returns((uri: string, data: any) => {
         for (const prop in HttpMockAPi.post) {
             if (new RegExp(prop).test(uri) === true) {
-                return HttpMockAPi.post[prop]();
+                return HttpMockAPi.post[prop](uri, data);
             }
         }
         throw new Error(`MockHttpApi says POST '${uri}' not found - 404`);
