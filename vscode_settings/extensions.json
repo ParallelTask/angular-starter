@@ -5,6 +5,7 @@
         "msjsdiag.debugger-for-chrome",
         "lonefy.vscode-js-css-html-formatter",
         "stevencl.adddoccomments",
-		"KnisterPeter.vscode-github"
+        "KnisterPeter.vscode-github",
+        "eamodio.gitlens"
     ]
 }

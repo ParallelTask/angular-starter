@@ -1,8 +1,8 @@
 import { inject, TestBed } from '@angular/core/testing';
 import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
 import { HttpClient } from '@angular/common/http';
-import { Times, It, Mock } from '../../../setup/extensions';
-import { Fixture } from '../../../fixture/fixture.core';
+import { Times, It, Mock } from '../../../../lib/test_framework/setup/extensions';
+import { Fixture } from '../../../../lib/test_framework/fixture/fixture.core';
 import { AboutService } from '../../../../app/modules/about/about.service';
 
 describe('modules.about.about.service.spec', () => {

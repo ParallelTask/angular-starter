@@ -3,5 +3,5 @@ export const AppConfiguration = {
     useHashStrategy: false,
     useCaseSensitiveUrl: false,
     enableTimeInterceptor: false,
-    enableHttpInterceptor: true
+    enableHttpInterceptor: false
 };

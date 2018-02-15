@@ -1,6 +1,6 @@
 import { TestBed, fakeAsync, tick } from '@angular/core/testing';
-import { Fixture } from '../../../fixture/fixture.core';
-import { Times, It, Mock } from '../../../setup/extensions';
+import { Fixture } from '../../../../lib/test_framework/fixture/fixture.core';
+import { Times, It, Mock } from '../../../../lib/test_framework/setup/extensions';
 import { IAboutService } from '../../../../app/modules/about/iabout.service';
 import { AboutComponent } from '../../../../app/modules/about/about.component';
 import { AboutConfig } from '../../../../app/modules/about/setup/about.config';
@@ -96,7 +96,7 @@ describe('modules.about.about.component.spec', () => {
         let cut = fixture.componentInstance;
         let element: Document = fixture.nativeElement;
 
-        let btn = fixture.debugElement.query(By.css('button'));
+        let btn = fixture.debugElement.query(By.css('.runMe'));
         let email = element.querySelector('.email');
 
         // stable the DOM changes

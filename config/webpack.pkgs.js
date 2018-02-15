@@ -3,7 +3,7 @@ var CopyWebpackPlugin = require('copy-webpack-plugin');
 var HtmlWebpackExternalsPlugin = require('html-webpack-externals-plugin');
 
 module.exports = {
-    // localfiles? specify paths
+    // load external dependencies from localfiles? configure paths
     local: {
         plugins: [
             new HtmlWebpackIncludeAssetsPlugin({
@@ -16,7 +16,7 @@ module.exports = {
             ])
         ]
     },
-    // cdn? configure cdn paths
+    // load external dependencies from cdn? configure cdn paths
     cdn: {
         plugins: [
             new HtmlWebpackExternalsPlugin({

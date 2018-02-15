@@ -4,7 +4,7 @@ import { RouterModule } from '@angular/router';
 import { AboutComponent } from '../about.component';
 import { AboutProviders } from './about.providers';
 // Added to test observables working
-import { ObservablesModule } from '../../../lib/observables/observables.module';
+import { ObservablesModule } from '../../../../lib/observables/observables.module';
 
 // #if global.lazyLoad.AboutModule === true
 import { AboutLazyRouterRoute } from './about.lazy.router.route';

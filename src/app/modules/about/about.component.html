@@ -6,4 +6,8 @@
 <button (ptHackerRxClick)="rxClick($event)">Observable EventClick</button>
 <button (click)="nlClick()">Nomral EventClick</button>
 <br>
-<button (click)="runMe()">RunMe</button>
+<button (click)="runMe()" class="runMe">RunMe</button>
+<br>
+<button (click)="getCustomer()">GetCustomer(45) - Configured in MOCKHttp</button>
+<button (click)="getCustomerNotFound()">GetCustomer(46) - Not Configured in MOCKHttp</button>
+<div> DataFromHTTP {{ httpData }}</div>
