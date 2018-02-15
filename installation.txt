@@ -1,0 +1,22 @@
+=======================================================
+INSTALLATION STEPS
+=======================================================
+
+Download software with respect to your operation system
+
+1. Download GIT for windows/linux/mac from https://git-scm.com/download
+2. Download VSCode for windows/linux/max from https://code.visualstudio.com/download
+3. You should be able to install both softwares without errors
+4. After installing GIT, open your command prompt and type 'git' and press enter
+    > git <enterkey>
+    you should find git help documentation, if not try to reinstall or google for suggestions
+5. Now type 'git clone https://github.com/ParallelTask/angular-starter.git'
+   in command prompt
+6. Project must now be downloaded
+7. Open your VSCode editor and click File->Open Folder
+   Browse to the directory where you have installed/cloned the project
+8. Check for .vscode directory, if not found create one. It must be hidden item
+9. After creating .vscode directory. Copy the files from 'vscode_settings' to '.vscode'
+10. Then open View->Extensions in VSCode, goto recommendations and install all of them
+
+.HAPPY CODING
