@@ -30,7 +30,7 @@ Uses `.scss` files for styling and no `.css` loaders are configured, add your ow
 - src
 
   Angular source code.
-- e2e2
+- e2e
 
   End to End tests.
 - vscode_settings
