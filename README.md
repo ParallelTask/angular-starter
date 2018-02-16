@@ -36,6 +36,13 @@ Uses `.scss` files for styling and no `.css` loaders are configured, add your ow
 - vscode_settings
 
   VSCode editor configuration files specific to angular. Copy these files to your local **.vscode** project directory and you will automatically get suggestions to install plugins. Install these plugins for good dev experience.
+- pcf_steps.txt
+  
+  Explains how to deploy your application to PCF environment
+- installation.txt
+ 
+  Explains the softwares required to start building angular-starter application
+ 
 
 ### Features
 
