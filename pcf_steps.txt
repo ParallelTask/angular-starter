@@ -5,11 +5,11 @@ Steps to push application to PCF
 1. You must first have PCF account to continue with the next steps. Create account @ https://login.run.pivotal.io/
 2. Once you are done with creating PCF account, go to your root folder of angular-starter application
 3. Build production ready files via `npm run publish` in command prompt, (you can also do with dev ready files)
-4. These command must output files to 'public' directory in root of app
+4. Above command must output files to 'public' directory in root of app
 5. Now copy all the files from 'pcf_settings' to 'public' (this is where your production ready files are built)
-6. Open command prompt pointing to public directory
-7. Run 'cf login -a api.run.pivotal.io', login to your pcf account using your credentials
-8. Run 'cf push -f manifest.yml' and you must be seeing app starts uploading
-9. Goto applications dashboard in PCF, open your app and click route URL provided by PCF.
+6. Open command prompt pointing location to public directory
+7. Run 'cf login -a api.run.pivotal.io', now login to your pcf account using your credentials
+8. Run 'cf push -f manifest.yml', now you must be seeing app starts uploading message
+9. Now goto applications dashboard in PCF, open your app and click route URL provided by PCF.
 
 HAPPY CODING.
